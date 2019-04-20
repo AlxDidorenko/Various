@@ -5,7 +5,7 @@ recA lexA сравниитьв бласте и пдб
 http://hmmer.org/ это изучить
 
 
-+ и - BLASTA на примере HMMER
++ и - BLAST на примере HMMER
 
 protein data bank посмотреть
 
