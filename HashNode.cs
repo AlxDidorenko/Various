@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Задание_6
 {
-    class HashNode
+    class HashNode<T>
     {
         public int key;
-        public HashNode value;
+        public HashNode<T> value;
     }
 }
