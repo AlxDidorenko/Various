@@ -4,54 +4,47 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Задание_6
+namespace Hash
 {
-    class ClassHash<T>
+    class ClassHash
     {
-        List<HashNode<string>>[] cont = new List<HashNode<string>>[100];
-        private int count = 0;
-        public int HashFunc(int key)
+        public List<HashNode>[] cont = new List<HashNode>[100];
+
+        public void Load()
         {
-            return key % cont.Length;
+            for (int i = 0; i < 100; i++)
+                cont[i] = new List<HashNode>();
         }
 
-        public void Addition(int key, HashNode<string> value)
+        public void Addition(HashNode hn)
         {
-            int index = HashFunc(key);
-            if (cont[index] == null)
-            {
-                cont[index].Add(value);
-            }
-            count++;
+            cont[hn.key % cont.Length].Add(hn);
         }
 
-        public string Find(int key)
+        public HashNode Find(int key)
         {
-            int index = HashFunc(key);
-            if (cont[index] != null)
+            HashNode result = new HashNode();
+            HashNode[] search = cont[key % cont.Length].Where(sf => sf.key == key).ToArray();
+            foreach (var founded in search)
             {
-                foreach (HashNode<string> hn in cont[index])
-                {
-                    if (hn.key == key)
-                    {
-                        return hn.ToString();
-                    }
-                }
+                result.key = founded.key;
+                result.value = founded.value;
             }
-            return null;
+            return result;
         }
 
         public void Deletion(int key)
         {
-            int index = HashFunc(key);
-                foreach (HashNode<string> hn in cont[index])
-                {
-                    if (hn.key == key)
-                    {
-                        cont[index].Remove(hn);
-                    }
-                }
-            count--;
+            HashNode[] search = cont[key % cont.Length].Where(sf => sf.key == key).ToArray();
+            foreach (var element in search)
+            {
+                cont[key % cont.Length].Remove(element);
+            }            
+        }
+
+        public List<HashNode>[] Retarray()
+        {
+            return cont;
         }
     }
 }

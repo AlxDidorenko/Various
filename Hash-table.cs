@@ -8,30 +8,73 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Задание_6
+namespace Hash
 {
-    public partial class HashTBL : Form
+    public partial class Workspace : Form
     {
-        ClassHash<string> Table = new ClassHash<string>();
-        public HashTBL()
+        ClassHash Table = new ClassHash();
+       
+        public Workspace()
         {
             InitializeComponent();
+            Table.Load();
         }
 
-        private void addbtn_Click(object sender, EventArgs e)
+        private void addbutton_Click(object sender, EventArgs e)
         {
-            //Table.Addition(Convert.ToInt32(keyenteradd.Text), valenteradd.Text);// добавить элемент типа HashNode<string>?
-            hashelem.Items.Add(Table.HashFunc(Convert.ToInt32(keyenteradd.Text)) + "   " + keyenteradd.Text + "   " + valenteradd.Text);
+            try
+            {
+                HashNode kv = new HashNode();
+                kv.key = Convert.ToInt32(keybox.Text);
+                kv.value = valuebox.Text;
+                Table.Addition(kv);
+                ShowNum();
+            }
+            catch
+            {
+                MessageBox.Show("Введите данные!");
+            }
         }
 
-        private void findbtn_Click(object sender, EventArgs e)
+        private void findbutton_Click(object sender, EventArgs e)
         {
-            findres.Items.Add(findres.Items.Add(Table.Find(Convert.ToInt32(keyenterfind.Text))));
+            ToolTip t = new ToolTip();
+            t.SetToolTip(findbutton, "Искать только по ключу!");
+            try
+            {
+                HashNode kv = Table.Find(Convert.ToInt32(keybox.Text));
+                foundedkey.Text = kv.key.ToString();
+                foundedfalue.Text = kv.value;
+            }
+            catch
+            {
+                MessageBox.Show("Введите данные!");
+            }
         }
 
-        private void delbtn_Click(object sender, EventArgs e)
+        private void deletebutton_Click(object sender, EventArgs e)
         {
-            Table.Deletion(Convert.ToInt32(keyenterdel.Text));
+            try
+            {
+                Table.Deletion(Convert.ToInt32(keybox.Text));
+                ShowNum();
+            }
+            catch
+            {
+                MessageBox.Show("Введите данные!");
+            }
+        }
+
+        public void ShowNum()
+        {
+            string s = "";
+            List<HashNode>[] arr = Table.Retarray();
+            shownumofelements.Items.Clear();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                s = arr[i].ToString();
+                shownumofelements.Items.Add(s);
+            }
         }
     }
 }
