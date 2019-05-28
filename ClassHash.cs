@@ -21,7 +21,7 @@ namespace Hash
             cont[hn.key % cont.Length].Add(hn);
         }
 
-        public HashNode Find(int key)
+        public string Find(int key)
         {
             HashNode result = new HashNode();
             HashNode[] search = cont[key % cont.Length].Where(sf => sf.key == key).ToArray();
@@ -30,7 +30,7 @@ namespace Hash
                 result.key = founded.key;
                 result.value = founded.value;
             }
-            return result;
+            return result.value;
         }
 
         public void Deletion(int key)

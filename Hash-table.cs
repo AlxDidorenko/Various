@@ -42,8 +42,8 @@ namespace Hash
             t.SetToolTip(findbutton, "Искать только по ключу!");
             try
             {
-                HashNode kv = Table.Find(Convert.ToInt32(keybox.Text));
-                foundedkey.Text = kv.key.ToString();
+                HashNode kv = new HashNode();
+                kv.value=Table.Find(Convert.ToInt32(keybox.Text));
                 foundedfalue.Text = kv.value;
             }
             catch
