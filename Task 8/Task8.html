@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Your Website</title>
+  </head>
+  <style>
+    div{
+        position: relative;
+        width: 50%;
+        height: 100%;
+    }
+    p{
+      color: white;
+    }
+    h1{
+      position: absolute;
+      right: 13cm;
+      color: white;
+    }
+    form{
+      position: absolute;
+      right: 20cm;
+      bottom: 7cm;
+    }
+    .col2{
+      position: absolute;
+      right: 2cm;
+      bottom: 6cm;
+    }
+    .subbtn{
+      position: absolute;
+      right: 16.9cm;
+      bottom: 3cm;
+    }
+ </style>
+  <body>
+    <div style="background: green; float: right;"></div>
+    <div style="background: red; float: left;"></div>
+    <h1>
+      Запись на зачет/экзамен
+    </h1>
+    <form>
+      <p><strong>ФИО</strong></p>
+      <p><input size="70" ></p>
+      <p><strong>Курс</strong></p>
+      <p><select name="select" size=1>
+        <option selected value="s1">1 Курс</option>
+        <option value="s2">2 Курс</option>
+        <option value="s3">3 Курс</option>
+        <option value="s4">4 Курс</option>
+        <option value="s5">5 Курс</option>
+        <option value="s6">6 Курс</option>
+       </select>
+       <p><strong>Факультет</strong></p>
+       <p><select name="select" size=1>
+         <option selected value="s1">Институт системного анализа и управления</option>
+         <option value="s2">Факультет естественных и инженерных наук</option>
+         <option value="s3">Инженерно-физический институт</option>
+         <option value="s4">Факультет социальных и гуманитарных наук</option>
+        </select>
+        <p><strong>Номер группы</strong></p>
+        <p><input size="10" ></p>
+     </form>
+     <form class="col2">
+        <p><strong>Предмет для сдачи</strong></p>
+        <p><select name="select" size=1>
+          <option selected value="s1">ПЯВУ</option>
+          <option value="s2">ЛАиАГ</option>
+          <option value="s3">ООП</option>
+          <option value="s4">ДМ</option>
+          <option value="s5">ОС</option>
+          <option value="s6">ПИС</option>
+          <option value="s7">ТЯПиМТ</option>
+          <option value="s8">СиФСС</option>
+         </select>
+         <p><strong>Преподаватель</strong></p>
+      <p><input size="50" ></p>
+      <p>Дата сдачи</p>
+   <p><input type="datetime-local"></p>
+   <p><b>Форма сдачи</b></p>
+    <p><input name="typ" type="radio" value="ochnaya"> Очная</p>
+    <p><input name="typ" type="radio" value="dist"> Дистанционная</p>
+     </form>
+     <form class="subbtn">
+        <p><input type="submit" value="Записаться"></p>
+     </form>
+  </body>
+</html>
