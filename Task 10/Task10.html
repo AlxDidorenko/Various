@@ -1,0 +1,158 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Your Website</title>
+  </head>
+  <style>
+    p{
+      color: black;
+    }
+    h1{
+      position: absolute;
+      right: 13cm;
+      color: white;
+    }
+    form{
+      position: absolute;
+      right: 25cm;
+      bottom: 15cm;
+    }
+    table{
+      position: absolute;
+      right: 21cm;
+      bottom: 7cm;
+    }
+    input:invalid:not(:placeholder-shown) {
+      border-color: red;
+      }
+    input:valid:not(:placeholder-shown) {
+      border-color: green;
+      }
+    .col2{
+      position: absolute;
+      right: 5cm;
+      bottom: 14.2cm;
+    }
+    .subbtn{
+      position: absolute;
+      right: 21cm;
+      bottom: 12cm;
+    }
+ </style>
+  <body>
+    <hr>
+    <div id="result"></div>
+    <h1>
+      Запись на зачет/экзамен
+    </h1>
+    <form class="subbtn">
+      <INPUT TYPE="button" NAME="button" Value="Click" onClick="result_form(this.form)">
+   </form>
+    <form>
+      <p><strong>ФИО</strong></p>
+      <p><input size="70" type="text" id="fio" required></p>
+      <p><strong>Курс</strong></p>
+      <p><select name="select" size=1 id="course">
+        <option selected value="1 Курс">1 Курс</option>
+        <option value="2 Курс">2 Курс</option>
+        <option value="3 Курс">3 Курс</option>
+        <option value="4 Курс">4 Курс</option>
+        <option value="5 Курс">5 Курс</option>
+        <option value="6 Курс">6 Курс</option>
+       </select>
+       <p><strong>Факультет</strong></p>
+       <p><select name="select" size=1 id="faculty">
+         <option selected value="Институт системного анализа и управления">Институт системного анализа и управления</option>
+         <option value="Факультет естественных и инженерных наук">Факультет естественных и инженерных наук</option>
+         <option value="Инженерно-физический институт">Инженерно-физический институт</option>
+         <option value="Факультет социальных и гуманитарных наук">Факультет социальных и гуманитарных наук</option>
+        </select>
+        <p><strong>Номер группы</strong></p>
+        <p><input size="10" type="number" id="group" required></p>
+     </form>
+     <form class="col2">
+        <p><strong>Предмет для сдачи</strong></p>
+        <p><select name="select" size=1 id="sub">
+          <option selected value="ПЯВУ">ПЯВУ</option>
+          <option value="ЛАиАГ">ЛАиАГ</option>
+          <option value="ООП">ООП</option>
+          <option value="ДМ">ДМ</option>
+          <option value="ОС">ОС</option>
+          <option value="ПИС">ПИС</option>
+          <option value="ТЯПиМТ">ТЯПиМТ</option>
+          <option value="СиФСС">СиФСС</option>
+         </select>
+         <p><strong>Преподаватель</strong></p>
+      <p><input size="50" type="text" id="teach" required></p>
+      <p>Дата сдачи</p>
+   <p><input type="datetime-local" id="date" required></p>
+   <p><b>Форма сдачи</b></p>
+    <p><input name="typeof" type="radio" value="Очная" id="typ" required> Очная</p>
+    <p><input name="typeof" type="radio" value="Дистанционная" id="typ" required> Дистанционная</p>
+     </form>
+     <script>
+   function result_form() {
+     var k;
+    var fio = document.getElementById('fio').value;
+    var course = document.getElementById('course').value;
+	 var faculty = document.getElementById('faculty').value;
+	 var group = document.getElementById('group').value;
+   var sub = document.getElementById('sub').value;
+   var teach = document.getElementById('teach').value;
+	 var date = document.getElementById('date').value;
+   var rad = document.getElementsByName('typeof');
+   for (var i=0;i<rad.length; i++) {
+        if (rad[i].checked) {
+            k=rad[i].value;
+        }
+    }
+   var tables = "<table border=1 id=\"1\">" +
+	"<tr>" +
+	    "<th>" + "ФИО" + "</th>" +
+		"<th>" + fio + "</th>" +		
+		"</tr>"+
+
+		"<tr>" +
+	    "<th>" + "Курс" + "</th>" +
+		"<th>" + course + "</th>" +		
+		"</tr>"+
+
+		"<tr>" +
+	    "<th>" + "Факультет" + "</th>" +
+		"<th>" + faculty + "</th>" +	
+		"</tr>"+
+
+		"<tr>"+
+		 "<th>" + "Группа" + "</th>" +
+		"<th>" + group + "</th>" +	
+		"</tr>"+
+
+		"<tr>"+
+		 "<th>" + "Предмет" + "</th>" +
+		"<th>" + sub + "</th>" +	
+		"</tr>"+
+
+		"<tr>"+
+		 "<th>" + "Преподаватель" + "</th>" +
+		"<th>" + teach + "</th>" +	
+		"</tr>"+
+
+		"<tr>"+
+		 "<th>" + "Дата" + "</th>" +
+		"<th>" + date + "</th>" +	
+		"</tr>"+
+
+		"<tr>"+
+		 "<th>" + "Форма" + "</th>" +
+		"<th>" + k + "</th>" +	
+		"</tr>"
+
+	"<\/table>";
+ 
+    document.getElementById('result').innerHTML = tables ;
+}
+ 
+document.getElementById('submit').addEventListener('click', result_form);
+    </script>
+  </body>
+</html>
