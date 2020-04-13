@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Drag and Drop</title>
+    <script>
+var mas = [];
+function AllowDrow(event) {
+    event.preventDefault();
+}
+function Drag(event) {
+    event.dataTransfer.setData("text", event.target.id);
+    event.dataTransfer.setData("content", event.target.textContent);
+}
+function Drop(event, block) {
+    event.preventDefault();
+    var data = event.dataTransfer.getData("text");
+    var content = event.dataTransfer.getData("content");
+    if(block.id == "block2"){
+        if(mas.indexOf(content) == -1){
+            mas.push(content);
+        }
+    }
+    if(block.id == "block1"){
+        if(mas.indexOf(content) != -1){
+            mas.splice(mas.indexOf(content), 1);
+        }
+    }
+    block.appendChild(document.getElementById(data));
+    console.log(mas);
+}
+    </script>
+    <style>
+#block1, #block2 {
+    height: 250px;
+    float: left;
+    width: 30%;
+    border: 1px solid #333;
+    margin: 10px;
+    padding: 10px;
+}
+a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    display: block;
+    margin-bottom: 5px;
+}
+#block1 a {
+    border: 1px solid black; 
+}
+#block2 a {
+    border: 1px solid black; 
+}
+    </style>
+</head>
+<body>
+<div id="block1" ondrop="Drop(event, this)" ondragover="AllowDrow(event)">
+    <a href="#" draggable="true" ondragstart="Drag(event)" id="drag1">Text1</a>
+    <a href="#" draggable="true" ondragstart="Drag(event)" id="drag2">Text2</a>
+    <a href="#" draggable="true" ondragstart="Drag(event)" id="drag3">Text3</a>
+</div>
+<div id="block2" ondrop="Drop(event, this)" ondragover="AllowDrow(event)">
+    <a href="#" draggable="true" ondragstart="Drag(event)" id="drag4">4Text</a>
+    <a href="#" draggable="true" ondragstart="Drag(event)" id="drag5">5Text</a>
+    <a href="#" draggable="true" ondragstart="Drag(event)" id="drag6">6Text</a>
+</div>
+</body>
+</html>
