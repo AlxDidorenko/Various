@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TASK LIST</title>
+<style>
+  body{
+    background-color:gray;
+   } 
+   h1{
+       color: black;
+       text-align: center;
+   }
+   ul{
+       position: absolute;
+	   left: 20cm;
+       top: 3cm;
+   }
+   button{
+    position: absolute;
+       left: 25cm;
+       top: 2.1cm;
+   }
+   .textbox{
+       position:absolute;
+       left: 20cm;
+   }
+    </style>
+  </head>
+<body>
+    <div>
+      <h1>TASK LIST</h1>
+      <form>
+        <input id="item" type="text" class="textbox" placeholder="New task" required />
+      </form>
+      <ul></ul>
+      <button>Clear</button>
+    </div>
+  
+    <script>
+const form = document.querySelector('form')
+const ul = document.querySelector('ul')
+const button = document.querySelector('button')
+const input = document.getElementById('item')
+let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : []
+localStorage.setItem('items', JSON.stringify(itemsArray))
+const data = JSON.parse(localStorage.getItem('items'))
+const liMaker = text => {
+  const li = document.createElement('li')
+  li.textContent = text
+  ul.appendChild(li)
+}
+form.addEventListener('submit', function(e) {
+  e.preventDefault()
+itemsArray.push(input.value)
+  localStorage.setItem('items', JSON.stringify(itemsArray))
+  liMaker(input.value)
+  input.value = ''
+})
+data.forEach(item => {
+  liMaker(item)
+})
+button.addEventListener('click', function() {
+  localStorage.clear()
+  while (ul.firstChild) {
+    ul.removeChild(ul.firstChild)
+  }
+})
+    </script>
+  </body>
+</html>
