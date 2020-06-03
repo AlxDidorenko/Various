@@ -1,0 +1,479 @@
+#BlackLineOnTop {
+  width: 100%;
+  height: 10px;
+  background-color: black;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
+#Main {
+  width: 1000px;
+  height: 1370px;
+  background-color: #e5e6ea;
+  margin: 0px;
+  position: absolute;
+  top: 10px;
+  left: 20%;
+  right: 20%;
+}
+
+#Top {
+  width: 1000px;
+  height: 150px;
+  margin: 0px;
+  position: absolute;
+}
+
+#Picture {
+  width: 300px;
+  height: 150px;
+  margin: 0px;
+  position: absolute;
+}
+
+#PicturePica {
+  margin: 10px 0 10px 10px;
+  position: absolute;
+}
+
+#ButtonsPanel {
+  width: 700px;
+  height: 150px;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  /* background-color: aqua; */
+}
+
+#MiddleButtonsPannel {
+  width: 700px;
+  height: 50px;
+  top: 60px;
+  position: absolute;
+  right: 0;
+}
+
+.ButtonTopLine li {
+  display: inline;
+}
+
+#ButtonTop {
+  text-decoration: none;
+  margin: 0 0 0 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: green;
+}
+
+#ButtonTop:hover {
+  color: black;
+}
+
+#JustLine {
+  position: absolute;
+  top: 150px;
+  width: 1000px;
+}
+
+#CDS {
+  position: absolute;
+  top: 175px;
+  width: 100%;
+  background-color: blue;
+  height: 450px;
+}
+
+#CREATIVE {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 90px;
+  width: 470px;
+  margin: 0;
+  position: relative;
+  top: 30px;
+  left: 30px;
+  color: White;
+}
+
+#DESIGN {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 90px;
+  width: 470px;
+  margin: 0;
+  position: relative;
+  top: 15px;
+  left: 30px;
+  color: White;
+}
+
+#SERVICES {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 90px;
+  width: 470px;
+  margin: 0;
+  position: relative;
+  top: 0px;
+  left: 30px;
+  color: White;
+}
+
+#LeftCDS {
+  width: 500px;
+  height: 450px;
+  position: absolute;
+}
+
+#RightCDS {
+  position: absolute;
+  width: 480px;
+  height: 450px;
+  right: 0;
+}
+
+#SecondPicture {
+  height: 100%;
+  width: 100%;
+}
+
+#BlackBar {
+  height: 50px;
+  width: 450px;
+  margin: 30px;
+  background-color: black;
+}
+
+#LeftBlackBar {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  width: 50%;
+  top: 355px;
+  left: 55px;
+  color: gray;
+  position: absolute;
+}
+
+#ButtonView {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  width: 50%;
+  top: 355px;
+  left: 315px;
+  color: green;
+  position: absolute;
+  text-decoration: none;
+}
+
+#ButtonView:hover {
+  color: White;
+}
+
+#JustLine2 {
+  position: absolute;
+  top: 630px;
+  width: 1000px;
+}
+
+#AOT {
+  height: 300px;
+  top: 655px;
+  width: 1000px;
+  position: absolute;
+}
+
+#First {
+  height: 300px;
+  width: 300px;
+  /* background-color: RED; */
+  position: absolute;
+}
+
+#Second {
+  height: 300px;
+  width: 300px;
+  left: 350px;
+  /* background-color: Blue; */
+  position: absolute;
+}
+
+#Thrid {
+  height: 300px;
+  width: 300px;
+  right: 0;
+  /* background-color: Green; */
+  position: absolute;
+}
+
+#TopOfAOT {
+  height: 35px;
+  width: 400px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  position: absolute;
+}
+
+.txt2 {
+  height: 35px;
+  width: 1000px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  position: absolute;
+  top: -2.5cm;
+}
+
+#BoldLine {
+  position: absolute;
+  top: 30px;
+  width: 97%;
+  border-width: 4px;
+  border-color: black;
+}
+
+#FirstABZ {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+}
+
+#Read {
+  height: 15px;
+  width: 80px;
+  top: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: green;
+  font-size: 15px;
+  position: absolute;
+  text-decoration: none;
+}
+
+#Read:hover {
+  color: black;
+}
+
+#C1heck {
+  width: 20px;
+  height: 20px;
+}
+
+#C2heck {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 80px;
+  left: 0px;
+}
+
+#C3heck {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 160px;
+  left: 0px;
+}
+
+#FirstText {
+  position: absolute;
+  top: 0px;
+  width: 265px;
+  left: 35px;
+}
+
+#SecondText {
+  position: absolute;
+  top: 80px;
+  width: 265px;
+  left: 35px;
+}
+
+#ThreeText {
+  position: absolute;
+  top: 160px;
+  width: 265px;
+  left: 35px;
+}
+
+#Signature {
+  position: absolute;
+  top: 220px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+#JustLine3 {
+  position: absolute;
+  top: 870px;
+  width: 1000px;
+}
+
+#BoxOfPictures {
+  position: absolute;
+  top: 990px;
+  height: 500px;
+  width: 1000px;
+}
+
+#JustLine4 {
+  position: absolute;
+  top: 1200px;
+  width: 1000px;
+}
+
+#BlogOfUpdates {
+  position: absolute;
+  top: 1230px;
+  height: 130px;
+  width: 1000px;
+}
+
+.subbtn{
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+
+#TopOfAOT2 {
+  height: 35px;
+  width: 350px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  position: absolute;
+}
+
+#LeftBoxOfUpdates {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 700px;
+}
+
+#RightBoxOfUpdates {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  height: 100%;
+  width: 300px;
+}
+
+#Paragraph {
+  top: 30px;
+  position: absolute;
+}
+
+#BottomMain {
+  position: absolute;
+  top: 1380px;
+  height: 130px;
+  width: 100%;
+  background-color: #e2e2e2;
+}
+
+#LeftBoxOfBottomMain {
+  position: absolute;
+  height: 80px;
+  top: 35px;
+  left: 375px;
+  width: 400px;
+}
+
+#TextOnBottom {
+  height: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: gray;
+  font-size: 13px; 
+  text-decoration: none;
+}
+
+#BottomLogo {  
+  margin: 0px;
+  left: 1160px;
+  position: absolute;
+}
+
+#Flogo {  
+  margin: 0px;
+  height: 50px;
+  width: 50px;
+  top: 30px;
+  left: 10px;
+  position: absolute;
+}
+#Tlogo {  
+  margin: 0px;
+  height: 50px;
+  width: 50px;
+  top: 30px;
+  left: 65px;
+  position: absolute;
+}
+#Xlogo {  
+  margin: 0px;
+  height: 50px;
+  width: 50px;
+  top: 30px;
+  left: 120px;
+  position: absolute;
+}
+#Rlogo {  
+  margin: 0px;
+  height: 50px;
+  width: 50px;
+  top: 30px;
+  left: 175px;
+  position: absolute;
+}
+#block1{
+  position: absolute;
+  top: -2cm;
+  left: 1cm;
+  height: 250px;
+  width: 15%;
+  border: 1px solid #e2e2e2;
+  margin: 10px;
+  padding: 10px;
+}
+#block2 {
+  position: absolute;
+  top: -2cm;
+  right: 1cm;
+  height: 220px;
+  width: 15%;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+#block3 {
+  position: absolute;
+  top: -2cm;
+  left: 4cm;
+  height: 220px;
+  width: 15%;
+  border: 1px solid #e2e2e2;
+  margin: 10px;
+  padding: 10px;
+}
+#block4 {
+  position: absolute;
+  top: -2cm;
+  left: 7cm;
+  height: 220px;
+  width: 15%;
+  border: 1px solid #e2e2e2;
+  margin: 10px;
+  padding: 10px;
+}
+.txt {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  display: block;
+  margin-bottom: 5px;
+}

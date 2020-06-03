@@ -1,0 +1,167 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Интернет-магазин "Дубна"</title>
+    <link href="Css.css" rel="stylesheet" />
+    <script>
+      var mas = [];
+      function AllowDrow(event) {
+          event.preventDefault();
+      }
+      function Drag(event) {
+          event.dataTransfer.setData("text", event.target.id);
+          event.dataTransfer.setData("content", event.target.textContent);
+      }
+      function Drop(event, block) {
+          event.preventDefault();
+          var data = event.dataTransfer.getData("text");
+          var content = event.dataTransfer.getData("content");
+          if(block.id == "block2"){
+              if(mas.indexOf(content) == -1){
+                  mas.push(content);
+              }
+          }
+          if(block.id == "block1"){
+              if(mas.indexOf(content) != -1){
+                  mas.splice(mas.indexOf(content), 1);
+              }
+          }
+          block.appendChild(document.getElementById(data));
+          console.log(mas);
+      }
+          </script>
+  </head>
+  <body>
+    <div id="BlackLineOnTop"></div>
+    <div id="Main">
+      <div id="Top">
+        <div id="Picture">
+          <img id="PicturePica" src="logo.png" />
+        </div>
+        <div id="ButtonsPanel">
+          <div id="MiddleButtonsPannel">
+            <ul class="ButtonTopLine">
+              <li><a href="" id="ButtonTop">КАТАЛОГ</a></li>
+              <li><a href="" id="ButtonTop">ЛИЧНЫЙ КАБИНЕТ</a></li>
+              <li><a href="" id="ButtonTop">КОНТАКТЫ</a></li>
+              <li><a href="" id="ButtonTop">ВАКАНСИИ</a></li>
+              <li><a href="" id="ButtonTop">ИНФОРМАЦИЯ</a></li>
+              <li><a href="" id="ButtonTop">НОВОСТИ</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="JustLine"><hr /></div>
+      <div id="CDS">
+        <div id="LeftCDS">
+          <p id="CREATIVE">ИНТЕРНЕТ</p>
+          <p id="DESIGN">МАГАЗИН</p>
+          <p id="SERVICES">"ДУБНА"</p>
+          <div id="BlackBar">
+            <div id="LeftBlackBar">
+              У НАС МНОГО НОВИНОК!
+            </div>
+            <div>
+              <a href="" id="ButtonView">ПОКАЗАТЬ →</a>
+            </div>
+          </div>
+        </div>
+        <div id="RightCDS">
+          <img id="SecondPicture" src="222.jpg" />
+        </div>
+      </div>
+      <div id="JustLine2"><hr /></div>
+      <div id="AOT">
+        <div id="First">
+          <div id="TopOfAOT">
+            О НАС
+          </div>
+          <div><hr id="BoldLine" /></div>
+          <div id="FirstABZ">
+            Мы предоставляем возможность жителям нашего города, а также его гостям
+            покупать у нас всё самое необходимое для повседневной жизни.
+          </div>
+        </div>
+
+        <div id="Second">
+          <div id="TopOfAOT">
+            ОСНОВНЫЕ ПРАВИЛА
+          </div>
+          <div><hr id="BoldLine" /></div>
+          <div id="FirstABZ">
+            <img id="C1heck" src="Checked.ico" />
+            <div id="FirstText">
+              Оплата производится только с помощью банковской карты.
+            </div>
+            <img id="C2heck" src="Checked.ico" />
+            <div id="SecondText">
+              При оформлении заказа ЗАПРЕЩЕНО указывать какую-либо запрещённую информацию.
+            </div>
+          </div>
+        </div>
+
+        <div id="Thrid">
+          <div id="TopOfAOT">
+            ИНФОРМАЦИЯ
+          </div>
+          <div><hr id="BoldLine" /></div>
+          <div id="FirstABZ">
+            Режим работы:
+            ПН-ПТ: 10:00-20:00
+            СБ-ВС: Выходной
+          </div>
+        </div>
+      </div>
+      <div id="JustLine3"><hr /></div>
+      <div id="BoxOfPictures">
+        <div class="txt2">
+          ПРЕДПОЧИТАЕМЫЕ ТОВАРЫ (ВЫБЕРИТЕ 5 ТИПОВ)
+        </div>
+        <div id="block1" ondrop="Drop(event, this)" ondragover="AllowDrow(event)">
+          <a class="txt" href="#" draggable="true" ondragstart="Drag(event)" id="drag1">Техника</a>
+          <a class="txt" href="#" draggable="true" ondragstart="Drag(event)" id="drag2">Книги</a>
+          <a class="txt" href="#" draggable="true" ondragstart="Drag(event)" id="drag3">Музыка</a>
+          <a class="txt" href="#" draggable="true" ondragstart="Drag(event)" id="drag4">Фильмы</a>
+          <a class="txt" href="#" draggable="true" ondragstart="Drag(event)" id="drag5">Одежда</a>
+          <a class="txt" href="#" draggable="true" ondragstart="Drag(event)" id="drag6">Обувь</a>
+          <a class="txt" href="#" draggable="true" ondragstart="Drag(event)" id="drag7">Сувениры</a>
+          <a class="txt" href="#" draggable="true" ondragstart="Drag(event)" id="drag8">Гигиена</a>
+      </div>
+      <div id="block2" ondrop="Drop(event, this)" ondragover="AllowDrow(event)">
+      </div>
+      </div>
+      <div id="JustLine4"><hr /></div>
+      <div id="BlogOfUpdates">
+        <div id="LeftBoxOfUpdates">
+          <div id="TopOfAOT2">
+            ВОЗНИКЛИ ПРОБЛЕМЫ? ЗАДАЙ ВОПРОС!
+          </div>
+          <div id="Paragraph">
+            <form>
+              <p><input size="70" ></p>
+              </form>
+              <form class="subbtn">
+                <p><input type="submit" value="Отправить"></p>
+             </form>
+          </div>
+        </div>
+        <div id="RightBoxOfUpdates">
+          <div id="TopOfAOT2">
+            МЫ В СОЦИАЛЬНЫХ СЕТЯХ
+          </div>
+          <img id="Flogo" src="f.jpg" />
+          <img id="Tlogo" src="t.jpg" />
+          <img id="Xlogo" src="x.jpg" />
+          <img id="Rlogo" src="r.jpg" />
+        </div>
+      </div>
+    </div>
+    <div id="BottomMain">
+      <div id="LeftBoxOfBottomMain">
+        <p id="TextOnBottom">Главная страница | О нас | Каталог | Блог | Контакты</p>
+        <p id="TextOnBottom">@2020 "Дубна". Все права защищены</p>
+      </div>
+      <img id="BottomLogo" src="logo2.png" />
+    </div>
+  </body>
+</html>
